@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ollama Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;500;600;700&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-background"></div>
+    
+    <!-- Main App Container -->
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <h1 class="app-title">🌿 Ollama Chat</h1>
+            <p class="app-subtitle">Created by Jessica</p>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Sidebar with Model Information -->
+            <aside class="sidebar">
+                <!-- Combined Model Card -->
+                <div class="info-card">
+                    <h2 class="card-title">Model Selection</h2>
+                    
+                    <!-- Model Selector -->
+                    <div class="model-selector-wrapper">
+                        <label for="selectedModel" class="model-label">Choose Model:</label>
+                        <select id="selectedModel" class="model-dropdown">
+                            <option value="">Loading models...</option>
+                        </select>
+                    </div>
+                    
+                    <div class="info-divider"></div>
+                    
+                    <!-- Current Model Info -->
+                    <h3 class="card-subtitle">🎯 Current Model</h3>
+                    <div id="selectedModelInfo" class="selected-model-info">
+                        <p class="placeholder-text">Select a model to begin</p>
+                    </div>
+                    
+                    <div class="info-divider"></div>
+                    
+                    <!-- Model Details -->
+                    <h3 class="card-subtitle">📊 Details</h3>
+                    <div id="modelDetails" class="model-details">
+                        <p class="placeholder-text">Model details will appear here</p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Chat Area -->
+            <main class="chat-area">
+                <div class="chat-card">
+                    <!-- Chat Header -->
+                    <div class="chat-header">
+                        <h2 class="chat-title">💬 Chat</h2>
+                        <button id="clearChatBtn" class="clear-chat-btn">
+                            <span class="btn-icon">🗑️</span>
+                            <span class="btn-text">Clear Chat</span>
+                        </button>
+                    </div>
+
+                    <!-- Messages Container -->
+                    <div id="messagesContainer" class="messages-container">
+                        <div class="welcome-message">
+                            <div class="welcome-icon">🌱</div>
+                            <h3 class="welcome-text">Welcome!</h3>
+                            <p>Select a model and start your conversation</p>
+                        </div>
+                    </div>
+
+                    <!-- Input Area -->
+                    <div class="input-area">
+                        <textarea 
+                            id="userInput" 
+                            class="chat-input" 
+                            placeholder="Type your message here... (Press Enter to send, Shift+Enter for new line)"
+                            rows="1"></textarea>
+                        <button id="sendBtn" class="send-btn">
+                            <span class="btn-text">Send</span>
+                            <span class="btn-icon">🍃</span>
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
